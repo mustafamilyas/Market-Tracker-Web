@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { CryptoCategories } from '../components/CryptoCategories'
 import { SearchInput } from '../components/SearchInput'
 import styles from '../styles/Home.module.css'
 
@@ -17,6 +18,7 @@ export default function Home() {
           <h1 className={styles.title}>Harga Crypto dalam rupiah Hari ini</h1>
           <SearchInput />
         </header>
+        <CryptoCategories/>
       </main>
     </div>
   )

@@ -1,0 +1,15 @@
+.container {
+  background-color: rgb(219,234,254);
+  color: rgb(10,80,226);
+  font-weight: 600;
+  padding: .5rem;
+  border-radius: .5rem;
+  cursor: not-allowed;
+  transition: all .2s;
+  font-size: .9rem;
+  flex-shrink: 0;
+}
+
+.container:hover {
+  filter: brightness(.7);
+}
