@@ -1,0 +1,13 @@
+.container {
+  width: 24rem;
+  background: rgb(241,241,241);
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: .9rem;
+}
