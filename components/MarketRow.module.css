@@ -1,3 +1,34 @@
 .container {
-  width: 100%;
+  font-weight: bold;
+}
+
+.container td:nth-last-child(1),
+.container td:nth-last-child(2),
+.container td:nth-last-child(3),
+.container td:nth-last-child(4) {
+  padding: 0.5rem;
+  border-bottom-width: 1px;
+  width: 130px;
+}
+
+.container td:nth-child(3) {
+  padding: 1.25rem;
+  width: 220px;
+  border-bottom-width: 1px;
+}
+
+.colLogo {
+  padding: .5rem;
+  vertical-align: center;
+}
+
+.colName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.token {
+  font-weight: normal;
+  color: grey;
 }

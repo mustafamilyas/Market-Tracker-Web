@@ -18,13 +18,13 @@ interface Props {
 export const MarketRow: FC<Props> = ({imageUrl, name, color,price, token, day, week, month, year}) => {
   return (
     <tr className={styles.container}>
-      <td>
-        <Image src={imageUrl} alt={`logo of ${name}`} width={20} height={20}/>
+      <td className={styles.colLogo}>
+        <Image src={imageUrl} alt={`logo of ${name}`} width={32} height={32}/>
       </td>
       <td>
-        <div>
+        <div className={styles.colName}>
           {name}
-          <span>{token}</span>
+          <span className={styles.token}>{token}</span>
         </div>
       </td>
       <td>

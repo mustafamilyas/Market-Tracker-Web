@@ -1,3 +1,34 @@
 .container {
   width: 100%;
+  border-collapse: separate;
+  border: 1px solid rgb(229,231,235);
+  border-radius: 1rem;
+}
+
+
+.container td, .container th {
+  border-collapse: collapse;
+  border-bottom: 1px solid rgb(229,231,235);
+} 
+
+.container thead {
+  color: rgb(151,151,151);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.container thead th {
+  padding: 1.25rem;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-top-right-radius: 0.5rem;
+}
+
+.container thead th:nth-child(3) {
+  padding: 1.25rem;
+  text-align: left;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
 }
