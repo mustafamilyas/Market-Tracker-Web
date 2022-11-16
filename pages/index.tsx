@@ -15,7 +15,6 @@ export async function getServerSideProps() {
 }
 
 export default function Home() {
-  const marketChanges = useGetMarketChanges();
   return (
     <div className={styles.container}>
       <Head>

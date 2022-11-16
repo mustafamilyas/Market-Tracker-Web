@@ -1,7 +1,42 @@
 import React from 'react'
+import { useGetMarketChanges } from '../hooks/useGetMarketChanges';
+import { MarketRow } from './MarketRow';
+import { VelocityText } from './VelocityText';
 
 export const MarketTable = () => {
+  const marketChanges = useGetMarketChanges();
+  // const marketChanges = [];
+
   return (
-    <div>MarketTable</div>
+    <table>
+      <tr>
+        <th/>
+        <th>
+          Crypto
+        </th>
+        <th>
+          Harga
+        </th>
+        <th>
+          24 Jam
+        </th>
+        <th>1 MGG</th>
+        <th>1 BLN</th>
+        <th>1 THN</th>
+      </tr>
+      {marketChanges.map((marketChange) => (
+        <MarketRow
+          key={marketChange.name}
+          name={marketChange.name ?? ''}
+          color={marketChange.color ?? ''}
+          imageUrl={marketChange.logo ?? ''}
+          day={marketChange.day ?? ''}
+          week={marketChange.week ?? ''}
+          month={marketChange.month ?? ''}
+          year={marketChange.year ?? ''}
+          token={marketChange.currencySymbol ?? ''}
+        />))
+      }
+    </table>
   )
 }
