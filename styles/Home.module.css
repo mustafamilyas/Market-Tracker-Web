@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   max-width: 1280px;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
@@ -11,6 +12,7 @@
   justify-content: space-between;
   width: 100%;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -22,18 +24,5 @@
   .grid {
     width: 100%;
     flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
   }
 }

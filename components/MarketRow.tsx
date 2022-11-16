@@ -2,6 +2,7 @@ import React, {FC} from 'react'
 import Image from 'next/image'
 import styles from './MarketRow.module.css';
 import { VelocityText } from './VelocityText';
+import { formatCurrency } from '../utils/currency';
 
 interface Props {
   imageUrl: string;
@@ -27,8 +28,9 @@ export const MarketRow: FC<Props> = ({imageUrl, name, color,price, token, day, w
           <span className={styles.token}>{token}</span>
         </div>
       </td>
-      <td>
-        {price}
+      <td className={styles.colPrice}>
+        {formatCurrency(parseInt(price))}
+        <VelocityText value={Boolean(day) ? parseFloat(day) : 0} className={styles.velocityMobile} />
       </td>
       <td>
         <VelocityText value={Boolean(day) ? parseFloat(day) : 0}/>

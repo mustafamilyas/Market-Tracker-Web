@@ -6,9 +6,10 @@ import styles from './VelocityText.module.css';
 
 interface Props {
   value: number;
+  className?: string;
 }
 
-export const VelocityText: FC<Props> = ({value}) => {
+export const VelocityText: FC<Props> = ({value, className}) => {
   const velocityIndicator =
     value > 0 ? <IconUp className={styles.icon}  viewBox="0 0 48 48" /> :
     value < 0 ? <IconDown className={styles.icon} viewBox="0 0 48 48"/> : null;
@@ -18,7 +19,7 @@ export const VelocityText: FC<Props> = ({value}) => {
     value < 0 ? styles.danger: null;
   
   return (
-    <div className={classNames(styles.container, classNameIndicator)}>
+    <div className={classNames(styles.container, classNameIndicator, className)}>
       {velocityIndicator}
       <span className={styles.value}>{value}</span>
     </div>

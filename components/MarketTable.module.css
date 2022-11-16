@@ -32,3 +32,16 @@
   border-top-width: 1px;
   border-bottom-width: 1px;
 }
+
+@media screen and (max-width: 900px) {
+  .container th:nth-last-child(1),
+  .container th:nth-last-child(2),
+  .container th:nth-last-child(3),
+  .container th:nth-last-child(4){
+    display: none;
+  }
+
+  .container thead th:nth-child(3) {
+    text-align: center;
+  }
+}
