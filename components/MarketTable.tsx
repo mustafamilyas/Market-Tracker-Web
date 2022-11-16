@@ -5,7 +5,6 @@ import styles from './MarketTable.module.css';
 
 export const MarketTable = () => {
   const marketChanges = useGetMarketChanges();
-  // const marketChanges = [];
 
   return (
     <table className={styles.container}>

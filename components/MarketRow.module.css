@@ -3,6 +3,11 @@
   font-weight: bold;
 }
 
+.container:hover {
+  background-color: azure;
+  transition: all .2s;
+}
+
 .container td:nth-last-child(1),
 .container td:nth-last-child(2),
 .container td:nth-last-child(3),
@@ -17,6 +22,7 @@
   width: 220px;
   border-bottom-width: 1px;
 }
+
 
 .colLogo {
   padding: .5rem;
