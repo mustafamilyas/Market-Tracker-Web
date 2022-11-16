@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Market Tracker App
+created using next js
+
+## Demo
+https://market-tracker-web.vercel.app/
 
 ## Getting Started
 
