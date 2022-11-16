@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from './MarketRow.module.css';
 import { VelocityText } from './VelocityText';
 import { formatCurrency } from '../utils/currency';
+import classNames from 'classnames';
 
 interface Props {
   imageUrl: string;
@@ -17,6 +18,9 @@ interface Props {
 }
 
 export const MarketRow: FC<Props> = ({imageUrl, name, color,price, token, day, week, month, year}) => {
+  const trendByDay = parseFloat(day);
+  const priceClassName = trendByDay > 0 ? styles.priceUp : trendByDay < 0 ? styles.priceDown : undefined;
+  
   return (
     <tr className={styles.container}>
       <td className={styles.colLogo}>
@@ -29,8 +33,12 @@ export const MarketRow: FC<Props> = ({imageUrl, name, color,price, token, day, w
         </div>
       </td>
       <td className={styles.colPrice}>
-        {formatCurrency(parseInt(price))}
-        <VelocityText value={Boolean(day) ? parseFloat(day) : 0} className={styles.velocityMobile} />
+        <span className={classNames(styles.animateBlinkColor, priceClassName)} key={price}>
+          {formatCurrency(parseInt(price))}
+        </span>
+        <span className={styles.velocityMobile}>
+          <VelocityText value={Boolean(day) ? parseFloat(day) : 0} />
+        </span>
       </td>
       <td>
         <VelocityText value={Boolean(day) ? parseFloat(day) : 0}/>
