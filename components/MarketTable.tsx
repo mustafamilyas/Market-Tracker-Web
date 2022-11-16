@@ -1,14 +1,14 @@
 import React from 'react'
 import { useGetMarketChanges } from '../hooks/useGetMarketChanges';
 import { MarketRow } from './MarketRow';
-import { VelocityText } from './VelocityText';
+import styles from './MarketTable.module.css';
 
 export const MarketTable = () => {
   const marketChanges = useGetMarketChanges();
   // const marketChanges = [];
 
   return (
-    <table>
+    <table className={styles.container}>
       <tr>
         <th/>
         <th>
@@ -27,6 +27,7 @@ export const MarketTable = () => {
       {marketChanges.map((marketChange) => (
         <MarketRow
           key={marketChange.name}
+          price={marketChange.latestPrice}
           name={marketChange.name ?? ''}
           color={marketChange.color ?? ''}
           imageUrl={marketChange.logo ?? ''}

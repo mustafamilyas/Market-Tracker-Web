@@ -1,7 +1,7 @@
 import React, {FC} from 'react'
 import Image from 'next/image'
+import styles from './MarketRow.module.css';
 import { VelocityText } from './VelocityText';
-
 
 interface Props {
   imageUrl: string;
@@ -12,11 +12,12 @@ interface Props {
   week: string;
   month: string;
   year: string;
+  price: string;
 }
 
-export const MarketRow: FC<Props> = ({imageUrl, name, color, token, day, week, month, year}) => {
+export const MarketRow: FC<Props> = ({imageUrl, name, color,price, token, day, week, month, year}) => {
   return (
-    <tr >
+    <tr className={styles.container}>
       <td>
         <Image src={imageUrl} alt={`logo of ${name}`} width={20} height={20}/>
       </td>
@@ -25,6 +26,9 @@ export const MarketRow: FC<Props> = ({imageUrl, name, color, token, day, week, m
           {name}
           <span>{token}</span>
         </div>
+      </td>
+      <td>
+        {price}
       </td>
       <td>
         <VelocityText value={Boolean(day) ? parseFloat(day) : 0}/>
